@@ -1,0 +1,592 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#020611;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+
+/* ===========================
+   SPACE BACKGROUND
+=========================== */
+
+.space{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-10;
+
+    background:
+    radial-gradient(circle at top,#10203f 0%,#040814 40%,#010205 100%);
+}
+
+
+/* ===========================
+   STARS
+=========================== */
+
+.stars,
+.stars2,
+.stars3{
+
+    position:absolute;
+
+    inset:0;
+
+    background-repeat:repeat;
+
+    animation:starsMove linear infinite;
+
+}
+
+
+.stars{
+
+background-image:
+radial-gradient(white 1px,transparent 1px);
+
+background-size:90px 90px;
+
+opacity:.65;
+
+animation-duration:120s;
+
+}
+
+
+.stars2{
+
+background-image:
+radial-gradient(#ffffff 1.5px,transparent 1.5px);
+
+background-size:180px 180px;
+
+opacity:.35;
+
+animation-duration:180s;
+
+}
+
+
+.stars3{
+
+background-image:
+radial-gradient(#8ab4ff 1px,transparent 1px);
+
+background-size:260px 260px;
+
+opacity:.25;
+
+animation-duration:260s;
+
+}
+
+
+@keyframes starsMove{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-500px);
+
+}
+
+}
+
+
+
+/* ===========================
+   MOON
+=========================== */
+
+.moon{
+
+position:absolute;
+
+right:8%;
+
+top:80px;
+
+width:140px;
+
+height:140px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle at 30% 30%,
+#fff,
+#d7e7ff 60%,
+#8ba4d9);
+
+box-shadow:
+
+0 0 50px rgba(255,255,255,.25),
+
+0 0 120px rgba(180,210,255,.15);
+
+}
+
+
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+position:relative;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+}
+
+
+.cover{
+
+position:absolute;
+
+inset:0;
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+filter:brightness(.45);
+
+animation:zoomHero 25s linear infinite alternate;
+
+}
+
+
+@keyframes zoomHero{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.08);
+
+}
+
+}
+
+
+.overlay{
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+rgba(0,0,0,.15),
+
+rgba(0,0,0,.55),
+
+rgba(2,6,17,1)
+
+);
+
+}
+
+
+.hero-content{
+
+position:relative;
+
+z-index:2;
+
+text-align:center;
+
+padding:20px;
+
+max-width:800px;
+
+}
+/* ===========================
+   HERO CONTENT
+=========================== */
+
+.hero h3{
+
+    color:#9dbdff;
+
+    letter-spacing:5px;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    margin-bottom:18px;
+
+    text-transform:uppercase;
+
+}
+
+.hero h1{
+
+    font-size:58px;
+
+    line-height:1.2;
+
+    font-weight:700;
+
+    text-shadow:0 0 25px rgba(255,255,255,.18);
+
+    margin-bottom:30px;
+
+}
+
+.hero p{
+
+    font-size:28px;
+
+    font-weight:500;
+
+    color:#ffffff;
+
+}
+
+.hero p span{
+
+    color:#ff6b9f;
+
+    margin:0 12px;
+
+    animation:heartbeat 1.6s infinite;
+
+}
+
+@keyframes heartbeat{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.25);
+
+}
+
+}
+
+
+/* ===========================
+   SCROLL
+=========================== */
+
+.scroll{
+
+    margin-top:70px;
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+    color:#d8e5ff;
+
+    animation:floatScroll 2s infinite;
+
+}
+
+@keyframes floatScroll{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(12px);
+
+}
+
+}
+
+
+/* ===========================
+   COUNTER
+=========================== */
+
+.counter{
+
+    padding:120px 25px;
+
+    text-align:center;
+
+}
+
+.counter h2{
+
+    font-size:40px;
+
+    margin-bottom:60px;
+
+}
+
+.cards{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+.card{
+
+    width:170px;
+
+    padding:35px 25px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(16px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#9dbdff;
+
+    box-shadow:0 0 30px rgba(120,170,255,.2);
+
+}
+
+.card span{
+
+    display:block;
+
+    font-size:46px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+.card p{
+
+    color:#c8d8ff;
+
+    letter-spacing:2px;
+
+}
+/* ===========================
+   GALLERY
+=========================== */
+
+.gallery{
+
+    padding:120px 8%;
+
+}
+
+.gallery h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:60px;
+
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:22px;
+
+}
+
+.gallery-grid img{
+
+    width:100%;
+
+    border-radius:22px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    object-fit:cover;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.04);
+
+    box-shadow:0 25px 60px rgba(120,170,255,.25);
+
+}
+
+
+/* ===========================
+   LETTER
+=========================== */
+
+.letter{
+
+    padding:120px 8%;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.letter-card{
+
+    max-width:900px;
+
+    width:100%;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:28px;
+
+    padding:50px;
+
+}
+
+.letter-card h2{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+    font-size:38px;
+
+}
+
+.letter-card p{
+
+    font-size:20px;
+
+    line-height:2;
+
+    color:#eef3ff;
+
+}
+
+.letter-card b{
+
+    color:#ffffff;
+
+    font-size:28px;
+
+}
+
+
+/* ===========================
+   MUSIC
+=========================== */
+
+.music{
+
+    padding:120px 8%;
+
+    text-align:center;
+
+}
+
+.music h2{
+
+    margin-bottom:35px;
+
+    font-size:40px;
+
+}
+
+.spotify-btn{
+
+    display:inline-block;
+
+    padding:18px 42px;
+
+    border-radius:50px;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    transition:.35s;
+
+}
+
+.spotify-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 30px rgba(120,170,255,.25);
+
+}
