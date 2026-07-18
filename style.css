@@ -1,0 +1,184 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+background:#000;
+color:#fff;
+font-family:'Cormorant Garamond',serif;
+overflow-x:hidden;
+}
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-2;
+}
+
+section{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:80px 25px;
+text-align:center;
+position:relative;
+}
+
+.hero{
+min-height:100vh;
+}
+
+.date{
+color:#D4AF37;
+letter-spacing:8px;
+font-size:18px;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-family:'Great Vibes',cursive;
+font-size:90px;
+font-weight:400;
+color:#D4AF37;
+margin-bottom:20px;
+}
+
+.subtitle{
+font-size:28px;
+line-height:1.7;
+opacity:.9;
+margin-bottom:45px;
+}
+
+button{
+padding:18px 55px;
+border:2px solid #D4AF37;
+background:transparent;
+color:#D4AF37;
+font-size:20px;
+font-weight:700;
+border-radius:60px;
+cursor:pointer;
+transition:.4s;
+font-family:'Cormorant Garamond',serif;
+}
+
+button:hover{
+background:#D4AF37;
+color:#000;
+transform:translateY(-4px);
+box-shadow:0 0 35px rgba(212,175,55,.45);
+}
+
+h2{
+font-size:52px;
+color:#D4AF37;
+margin-bottom:25px;
+font-weight:600;
+}
+
+section p{
+max-width:750px;
+font-size:24px;
+line-height:
+  .gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+width:100%;
+max-width:1000px;
+margin-top:40px;
+}
+
+.gallery img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:20px;
+border:2px solid rgba(212,175,55,.25);
+transition:.4s;
+cursor:pointer;
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+.gallery img:hover{
+transform:scale(1.06);
+border-color:#D4AF37;
+box-shadow:0 0 35px rgba(212,175,55,.45);
+}
+
+.songBtn{
+display:inline-block;
+margin-top:35px;
+padding:18px 50px;
+border-radius:60px;
+border:2px solid #D4AF37;
+color:#D4AF37;
+text-decoration:none;
+font-size:22px;
+font-weight:600;
+transition:.35s;
+}
+
+.songBtn:hover{
+background:#D4AF37;
+color:#000;
+transform:translateY(-4px);
+box-shadow:0 0 30px rgba(212,175,55,.45);
+}
+
+#ending h2{
+font-size:65px;
+margin-bottom:25px;
+}
+
+#ending p{
+font-size:30px;
+line-height:2;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:65px;
+}
+
+.subtitle{
+font-size:22px;
+}
+
+h2{
+font-size:38px;
+}
+
+section p{
+font-size:20px;
+}
+
+button{
+width:90%;
+max-width:320px;
+}
+
+.songBtn{
+width:90%;
+max-width:320px;
+}
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+.gallery img{
+height:320px;
+}
+
+}
